@@ -1,0 +1,13 @@
+/** @type {import('tailwindcss').Config} */
+
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: { extend: {
+    fontFamily: {
+      notokr: ['"Noto Sans KR"', 'sans-serif'],
+      dmserif: [ '"DM Serif Text"', 'sans-serif'],
+      nanum: [ '"Nanum Myeongjo"', '"Noto Sans KR"', 'sans-serif']
+    }
+  } },
+  plugins: [],
+}
