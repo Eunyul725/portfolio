@@ -168,13 +168,13 @@ const projects = [
       id="projects" 
       className="min-h-screen pt-[80px] max-w-7xl mx-auto py-12"
     >
-      <h2 className="font-dmserif text-center text-4xl font-bold mb-12 text-shadow">Projects</h2>
+      <h2 className="font-dmserif text-center text-2xl md:text-4xl font-bold mb-12 text-shadow">Projects</h2>
 
-      <div className="flex flex-wrap gap-8 justify-center mt-12 font-notokr">
+      <div className="flex flex-wrap gap-8 justify-center mt-12 font-notokr px-6 md:px-0">
         { projects.map((p)=> (
           <TiltCard
             key={p.id}
-            className="bg-neutral-900 shadow-lg flex flex-col w-[calc(33.333%-2rem)]"
+            className="bg-neutral-900 shadow-lg flex flex-col md:w-[calc(33.333%-2rem)]"
             maxTilt={16}
             scale={1.04}
           >
@@ -187,12 +187,12 @@ const projects = [
             </div>
             <div className="p-5 flex flex-col gap-4 flex-1">
               <div>
-                <h3 className="text-xl font-bold text-shadow">{p.title}</h3>
+                <h3 className="text-base md:text-xl font-bold text-shadow">{p.title}</h3>
                 {p.tagline && (
-                  <p className="text-sm text-gray-300 text-shadow-sm">{p.tagline}</p>
+                  <p className="text-xs md:text-sm text-gray-300 text-shadow-sm pt-1">{p.tagline}</p>
                 )}
               </div>
-              <p className="text-sm text-gray-200">{p.desc}</p>
+              <p className="text-xs md:text-sm text-gray-200">{p.desc}</p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {p.tech.map((t) => (
                   <span
@@ -204,13 +204,13 @@ const projects = [
                 ))}
               </div>
               <div className="mt-6 h-px bg-white/10" />
-              <div className="flex gap-3 font-bold">
+              <div className="flex gap-3 items-center font-bold">
                 {p.links.live && (
                   <a
                     href={p.links.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1 w-32 bg-blue-600 rounded text-sm text-center"
+                    className="px-3 py-1 w-32 bg-blue-600 rounded text-xs md:text-sm text-center cursor-pointer"
                   >
                     Website
                   </a>
@@ -220,7 +220,7 @@ const projects = [
                     href={p.links.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1 w-32 bg-red-600 rounded text-sm text-center"
+                    className="px-3 py-1 w-32 bg-red-600 rounded text-xs md:text-sm text-center cursor-pointer"
                   >
                     Repo
                   </a>
@@ -230,7 +230,7 @@ const projects = [
                     href={p.links.caseStudy}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1 w-32 bg-gray-500 rounded text-sm text-center"
+                    className="px-3 py-1 w-32 bg-gray-500 rounded text-xs ms:text-sm text-center cursor-pointer"
                   >
                     MoreInfo
                   </a>

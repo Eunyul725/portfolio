@@ -22,7 +22,9 @@ function Skills() {
       { name: "vite", icon: `${import.meta.env.BASE_URL}/icons/vite.svg` },
     ],
     design: [
-      { name: "figma", icon: `${import.meta.env.BASE_URL}/icons/figma.svg` },
+      { name: "miri canvas", icon: `${import.meta.env.BASE_URL}/icons/miricanvas.svg` },
+      { name: "Canva", icon: `${import.meta.env.BASE_URL}/icons/canva.svg` },
+      { name: "Figma", icon: `${import.meta.env.BASE_URL}/icons/figma.svg` },
       { name: "Adobe Illustrator", icon: `${import.meta.env.BASE_URL}/icons/illustrator.svg` },
       { name: "Adobe Photoshop", icon: `${import.meta.env.BASE_URL}/icons/photoshop.svg` },
       { name: "Adobe Premiere Pro", icon: `${import.meta.env.BASE_URL}/icons/premierepro.svg` },
@@ -45,7 +47,7 @@ function Skills() {
 
   return (
     <section id="skills" className="min-h-screen pt-[80px] max-w-7xl mx-auto px-6">
-      <h2 className="font-dmserif text-center text-4xl font-bold mb-12 text-shadow">Skills</h2>
+      <h2 className="font-dmserif text-center text-2xl md:text-4xl font-bold mb-12 text-shadow">Skills</h2>
 
       <div className="space-y-16">
         {Object.entries(skills).map(([key, items]) => (
@@ -53,7 +55,7 @@ function Skills() {
             {/* 카테고리 타이틀 */}
             <div className="flex items-center gap-4 mb-6">
               <span className="w-1.5 h-6 bg-sky-400 rounded" />
-              <h3 className="text-base font-semibold text-shadow">
+              <h3 className="text-sm md:text-base font-semibold text-shadow">
                 {SKILL_LABELS[key as keyof typeof SKILL_LABELS]}
               </h3>
               <div className="h-px flex-1 bg-white/10" />
@@ -62,7 +64,7 @@ function Skills() {
             {/* 아이콘 리스트 */}
             <div className="flex flex-wrap gap-16 ml-6">
               {items.map((s) => (
-                <div key={s.name} className="flex flex-col items-center gap-2">
+                <div key={s.name} className="flex flex-col items-center gap-2 w-20 md:w-18">
                   <img
                     src={s.icon}
                     alt={`${s.name} icon`}

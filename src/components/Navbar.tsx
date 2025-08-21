@@ -52,8 +52,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed right-0 top-6 z-50 text-white mr-12">
-      <ul className="flex gap-8 text-base md:text-xl font-dmserif font-bold">
+    <nav className="fixed right-0 top-6 z-50 text-white mr-4 md:mr-12">
+      <ul className="flex gap-4 md:gap-8 text-base md:text-xl font-dmserif font-bold">
         {IDS.map((link) => (
           <li key={link}>
             <button
