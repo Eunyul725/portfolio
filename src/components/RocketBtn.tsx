@@ -1,4 +1,4 @@
-import { motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface RocketBtnProps {
   launched: boolean;
@@ -9,7 +9,6 @@ interface RocketBtnProps {
 function RocketBtn( { onLaunch, launched, onFlightEnd }: RocketBtnProps ) {
   return (
     <div className="pointer-events-none">
-    {/* Rocket */}
       <motion.button
         aria-label="발사!"
         disabled={launched}
@@ -27,12 +26,12 @@ function RocketBtn( { onLaunch, launched, onFlightEnd }: RocketBtnProps ) {
             : { repeat: Infinity, duration: 3, ease: "easeInOut" }
         }
         onAnimationComplete={()=> {
-          if( launched ) onFlightEnd();
+          if( launched ) onFlightEnd?.();
         }}
         style={{}}
         whileTap={{ scale: 0.95 }}
       >
-        <img src="/images/rocket.png" alt="Rocket" className="w-full h-full object-contain" draggable={false} />
+        <img src={`${import.meta.env.BASE_URL}/images/rocket.png`} alt="Rocket" className="w-full h-full object-contain" draggable={false} />
       </motion.button>
     </div>
   )

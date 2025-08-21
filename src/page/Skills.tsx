@@ -1,36 +1,36 @@
 function Skills() {
   const skills = {
     frontendBasics: [
-      { name: "HTML", icon: "/icons/html.svg" },
-      { name: "CSS", icon: "/icons/css.svg" },
-      { name: "JavaScript", icon: "/icons/javascript.svg" },
-      { name: "TypeScript", icon: "/icons/typescript.svg" },
+      { name: "HTML", icon: `${import.meta.env.BASE_URL}/icons/html.svg` },
+      { name: "CSS", icon: `${import.meta.env.BASE_URL}/icons/css.svg` },
+      { name: "JavaScript", icon: `${import.meta.env.BASE_URL}/icons/javascript.svg` },
+      { name: "TypeScript", icon: `${import.meta.env.BASE_URL}/icons/typescript.svg` },
     ],
     frameworks: [
-      { name: "React", icon: "/icons/react.svg" },
-      { name: "React Router", icon: "/icons/react-router.svg" },
-      { name: "Redux", icon: "/icons/redux.svg" },
-      { name: "Vue", icon: "/icons/vue.svg" },
-      { name: "jQuery", icon: "/icons/jquery.svg" },
+      { name: "React", icon: `${import.meta.env.BASE_URL}/icons/react.svg` },
+      { name: "React Router", icon: `${import.meta.env.BASE_URL}/icons/react-router.svg` },
+      { name: "Redux", icon: `${import.meta.env.BASE_URL}/icons/redux.svg` },
+      { name: "Vue", icon: `${import.meta.env.BASE_URL}/icons/vue.svg` },
+      { name: "jQuery", icon: `${import.meta.env.BASE_URL}/icons/jquery.svg` },
     ],
     styling: [
-      { name: "SCSS", icon: "/icons/scss.svg" },
-      { name: "Tailwind", icon: "/icons/tailwindcss.svg" },
-      { name: "Swiper", icon: "/icons/swiper.svg" },
+      { name: "SCSS", icon: `${import.meta.env.BASE_URL}/icons/scss.svg` },
+      { name: "Tailwind", icon: `${import.meta.env.BASE_URL}/icons/tailwindcss.svg` },
+      { name: "Swiper", icon: `${import.meta.env.BASE_URL}/icons/swiper.svg` },
     ],
     tools: [
-      { name: "vite", icon: "/icons/vite.svg" },
+      { name: "vite", icon: `${import.meta.env.BASE_URL}/icons/vite.svg` },
     ],
     design: [
-      { name: "figma", icon: "/icons/figma.svg" },
-      { name: "Adobe Illustrator", icon: "/icons/illustrator.svg" },
-      { name: "Adobe Photoshop", icon: "/icons/photoshop.svg" },
-      { name: "Adobe Premiere Pro", icon: "/icons/premierepro.svg" },
-      { name: "Adobe After Effects", icon: "/icons/aftereffects.svg" },
+      { name: "figma", icon: `${import.meta.env.BASE_URL}/icons/figma.svg` },
+      { name: "Adobe Illustrator", icon: `${import.meta.env.BASE_URL}/icons/illustrator.svg` },
+      { name: "Adobe Photoshop", icon: `${import.meta.env.BASE_URL}/icons/photoshop.svg` },
+      { name: "Adobe Premiere Pro", icon: `${import.meta.env.BASE_URL}/icons/premierepro.svg` },
+      { name: "Adobe After Effects", icon: `${import.meta.env.BASE_URL}/icons/aftereffects.svg` },
     ],
     collaboration: [
-      { name: "Notion", icon: "/icons/notion.svg" },
-      { name: "Discord", icon: "/icons/discord.svg" },
+      { name: "Notion", icon: `${import.meta.env.BASE_URL}/icons/notion.svg` },
+      { name: "Discord", icon: `${import.meta.env.BASE_URL}/icons/discord.svg` },
     ],
   } as const;
 

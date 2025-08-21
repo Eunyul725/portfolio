@@ -1,5 +1,3 @@
-import React from "react";
-
 function CurveBg() {
   return (
     <div className="relative w-full h-full pointer-events-none">

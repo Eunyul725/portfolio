@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 const METEOR_DURATION = 1.6; // s  ← 느리게 하고 싶으면 2.2 같은 값으로만 바꿔
 const METEOR_COUNT = 3;

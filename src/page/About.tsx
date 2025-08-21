@@ -1,9 +1,6 @@
-import React  from "react";
 import CurveBg from "../components/CurveBg";
 
-
 function About() {
-
   return (
     <section
       id="about"
@@ -22,7 +19,7 @@ function About() {
           <div className="relative basis-[400px] shrink-0 h-[392px]">
             <div className="w-[210px] h-[280px] rounded-2xl overflow-hidden">
               <img
-                src="/images/ballerina.png"
+                src={`${import.meta.env.BASE_URL}/images/ballerina.png`}
                 alt="발레 현역 사진"
                 className="block w-full h-full object-cover object-center" 
               />
@@ -30,7 +27,7 @@ function About() {
             <div className="absolute top-[180px] left-[126px] w-[265px] h-[265px] rounded-full overflow-hidden"
             >
               <img 
-                src="/images/jey.jpg" 
+                src={`${import.meta.env.BASE_URL}/images/jey.jpg`}
                 alt="프로필 사진" 
                 className="block w-full h-full object-cover object-center"
               />
