@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 interface RocketBtnProps {
   launched: boolean;
@@ -14,6 +16,8 @@ function RocketBtn( { onLaunch, launched, onFlightEnd }: RocketBtnProps ) {
         disabled={launched}
         onClick={onLaunch}
         className="pointer-events-auto absolute bottom-[14%] left-1/2 -translate-x-1/2 w-12 h-12 select-none z-50"
+        data-tooltip-id="rocketTip"
+        data-tooltip-content="로켓을 누르면 발사됩니다."
         initial={{ x: 0, y: 0, rotate: 35, opacity: 1 }}
         animate={
           launched
@@ -33,6 +37,7 @@ function RocketBtn( { onLaunch, launched, onFlightEnd }: RocketBtnProps ) {
       >
         <img src={`${import.meta.env.BASE_URL}/images/rocket.png`} alt="Rocket" className="w-full h-full object-contain" draggable={false} />
       </motion.button>
+      <Tooltip id="rocketTip" place="top" />
     </div>
   )
 }

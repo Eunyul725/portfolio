@@ -31,6 +31,7 @@ function Skills() {
       { name: "Adobe After Effects", icon: `${import.meta.env.BASE_URL}/icons/aftereffects.svg` },
     ],
     collaboration: [
+      { name: "Microsoft PowerPoint", icon: `${import.meta.env.BASE_URL}/icons/powerpoint.svg` },
       { name: "Notion", icon: `${import.meta.env.BASE_URL}/icons/notion.svg` },
       { name: "Discord", icon: `${import.meta.env.BASE_URL}/icons/discord.svg` },
     ],

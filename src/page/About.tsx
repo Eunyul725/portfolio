@@ -27,7 +27,7 @@ function About() {
             <div className="absolute top-[180px] left-[126px] w-[265px] h-[265px] rounded-full overflow-hidden"
             >
               <img 
-                src={`${import.meta.env.BASE_URL}/images/jey.jpg`}
+                src={`${import.meta.env.BASE_URL}/images/profilePhoto.jpg`}
                 alt="프로필 사진" 
                 className="block w-full h-full object-cover object-center"
               />

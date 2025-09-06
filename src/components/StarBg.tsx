@@ -1,86 +1,103 @@
-import { useMemo } from "react";
+import { useEffect, useRef } from "react";
 
-const METEOR_DURATION = 1.6; // s  ← 느리게 하고 싶으면 2.2 같은 값으로만 바꿔
-const METEOR_COUNT = 3;
+type Props = {
+  starCount? : number;
+  meteorCount? : number;
+  meteorDuration? : number;
+  meteorDelayMax? : number;
+}
+type Star = {
+  top : number;  //%
+  left : number;  //%
+  size : number;  //px
+  dur : number;  //s
+}
 
-function StarBg() {
-  // ★ 별: 위치/깜빡임만 1회 생성
-  const stars = useMemo(
-    () =>
-      Array.from({ length: 80 }, () => ({
-        top: Math.random() * 100,
-        left: Math.random() * 100,
-        size: Math.random() < 0.18 ? 3 : 2,
-        dur: 1 + Math.random() * 2, // 1~3s
-      })),
-    []
-  );
+function StarBg({
+  starCount = 80,
+  meteorCount = 3, 
+  meteorDuration = 2.5,
+  meteorDelayMax = 2,
+} : Props ) {
+  //별
+  const starRef = useRef<Star[]> (
+    Array.from({ length: starCount }, () => ({
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      size: Math.random() < 0.18 ? 3:2,
+      dur : 1 + Math.random() * 2
+    }))
+  )
 
-  // ★ 별똥별: 슬롯 개수만 고정. 각 엘리먼트는 자기 사이클마다 시작점만 랜덤으로 갱신
-  const meteorSlots = Array.from({ length: METEOR_COUNT }, (_, i) => i);
+  const meteorRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(()=> {
+    const place = (el: HTMLDivElement) => {
+      const top = Math.random() *100;
+      const left = Math.random() *100;
+      el.style.top = `${top}%`;
+      el.style.left = `${left}%`;
+      
+      const duration = meteorDuration; // 비율만큼 시간 보정
+      el.style.animationDelay = `${Math.random() * meteorDelayMax}s`;
+      el.style.animationDuration = `${duration}s`;
+    }
+
+    const onIter = ( e: AnimationEvent ) => {
+      const el = e.currentTarget as HTMLDivElement;
+      //다음 사이클 시작 직전에 새 위치/시차로 갱신(플리커 방지)
+      requestAnimationFrame(() => place(el));
+    };
+
+    meteorRef.current.forEach((el) => {
+      if (!el) return;
+      place(el);
+      el.addEventListener("animationiteration", onIter);
+    });
+
+    return () => {
+      meteorRef.current.forEach((el) => {
+        if (!el) return;
+        el.removeEventListener("animationiteration", onIter);
+      });
+    }
+  }, [meteorDuration, meteorDelayMax]);
+
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0">
       {/* 별 */}
-      {stars.map((s, i) => (
+      {starRef.current.map((s, i) => (
         <div
           key={`star-${i}`}
           className="absolute rounded-full bg-white"
           style={{
             top: `${s.top}%`,
             left: `${s.left}%`,
-            width: s.size,
-            height: s.size,
+            width: `${s.size}px`,
+            height: `${s.size}px`,
             opacity: 0.9,
             animation: `twinkle ${s.dur}s ease-in-out infinite`,
+            filter: "drop-shadow(0 0 2px rgba(255,255,255,0.7))",
           }}
         />
       ))}
 
       {/* 별똥별 */}
-      {meteorSlots.map((id) => (
+      {Array.from({length: meteorCount}).map((_, i) => (
         <div
-          key={`meteor-${id}`}
-          ref={(el) => {
-            if (!el) return;
-
-            // 시작점을 안전하게 랜덤 배치 (양끝 여유)
-            const place = () => {
-              const top = Math.random() * 80;       // 0~80%
-              const left = 15 + Math.random() * 70; // 15~85%
-              // 딜레이 랜덤은 시각적으로 "갑툭튀"처럼 보이기도 해서 기본 0으로 둠
-              el.style.top = `${top}%`;
-              el.style.left = `${left}%`;
-              el.style.animationDelay = `0s`;
-              // duration 고정 (속도 고정)
-              el.style.animationDuration = `${METEOR_DURATION}s`;
-            };
-
-            // 초기 1회
-            place();
-
-            // 매 사이클마다 새 위치 배치
-            el.onanimationiteration = () => {
-              // 프레임 경계에서 갱신(플리커 방지)
-              requestAnimationFrame(place);
-            };
-          }}
-          className="absolute will-change-transform"
-          // shorthand 금지: 분해해서 설정해야 위에서 넣은 duration/ delay가 유지됨
-          style={{
-            animationName: "meteorFall",
-            animationTimingFunction: "linear",
-            animationIterationCount: "infinite",
-          }}
+          key={`meteor-${i}`}
+          ref={(el) => (meteorRef.current[i] = el)}
+          className="absolute meteor will-change-transform"
         >
           {/* 방향 고정(↙). rotate는 시각적 방향만 맞추는 용도 */}
-          <div className="relative" style={{ transform: "rotate(140deg)" }}>
-            {/* 꼬리(고정 길이: 안정적인 시각) */}
+          <div className="relative" style={{ transform: "rotate(154deg)" }}>
+            {/* 꼬리 */}
             <div
               className="absolute top-1/2 -translate-y-1/2 rounded-full"
               style={{
                 right: 0,
-                width: "70px",
+                width: "100px",
                 height: "2px",
                 background:
                   "linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.95))",
@@ -90,7 +107,11 @@ function StarBg() {
             {/* 머리 */}
             <div
               className="rounded-full bg-white"
-              style={{ width: 4, height: 4, boxShadow: "0 0 6px rgba(255,255,255,0.9)" }}
+              style={{ 
+                width: "4px", 
+                height: "4px", 
+                boxShadow: "0 0 6px rgba(255,255,255,0.9)" 
+              }}
             />
           </div>
         </div>

@@ -10,15 +10,15 @@ const projects = [
     desc: "부드러운 애니메이션과 카드형 UI를 활용해 감성적인 OTT 메인페이지 구현",
     cover: `${import.meta.env.BASE_URL}/images/whacha.png`,
     tech: [ 
-      { name: "React", icon: `${import.meta.env.BASE_URL}/icons/react.svg` },
-      { name: "SCSS", icon: `${import.meta.env.BASE_URL}icons/scss.svg` },
-      { name: "Swiper", icon: `${import.meta.env.BASE_URL}/icons/swiper.svg` },
+      { name: "HTML", icon: `${import.meta.env.BASE_URL}/icons/html.svg` },
+      { name: "CSS", icon: `${import.meta.env.BASE_URL}icons/css.svg` },
+      { name: "JavaScript", icon: `${import.meta.env.BASE_URL}/icons/javascript.svg` },
       { name: "Responsive Web", icon: `${import.meta.env.BASE_URL}/icons/mediaquery.svg` },
     ],
     links: { 
       live: "https://eunyul725.github.io/movie/", 
       repo: "https://github.com/Eunyul725/movie", 
-      caseStudy: "#" 
+      caseStudy: "https://www.notion.so/WHACHA-26607c6b30e38078bcaad89bd972a43e?source=copy_link" 
     },
   },
   {
@@ -37,7 +37,7 @@ const projects = [
     links: { 
       live: "https://eunyul725.github.io/pet_Hospital/", 
       repo: "https://github.com/Eunyul725/pet_Hospital", 
-      caseStudy: "#" 
+      caseStudy: "https://www.notion.so/26607c6b30e38059b21be50853922909?source=copy_link" 
     },
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     links: { 
       live: "https://eunyul725.github.io/kiosk/", 
       repo: "https://github.com/Eunyul725/kiosk", 
-      caseStudy: "#" 
+      caseStudy: "https://www.notion.so/26607c6b30e380b0945ed5e134c216d3?source=copy_link" 
     },
   },
   {
@@ -70,7 +70,7 @@ const projects = [
     links: { 
       live: "https://eunyul725.github.io/weather/", 
       repo: "https://github.com/Eunyul725/weather", 
-      caseStudy: "#" 
+      caseStudy: "https://www.notion.so/26607c6b30e3803bac6afcce18c23ed7?source=copy_link" 
     },
   },
   {
@@ -80,13 +80,13 @@ const projects = [
     desc: "반려동물의 건강상태, 일상 기록을 블로그 형태로 반려동물 추가 및 사진 업로드 구현 ",
     cover: `${import.meta.env.BASE_URL}/images/pet_blog.png`,
     tech: [ 
-      { name: "Vue", icon: `${import.meta.env.BASE_URL}/icons/vue.png` },
+      { name: "Vue", icon: `${import.meta.env.BASE_URL}/icons/vue.svg` },
       { name: "Mobile Web", icon: `${import.meta.env.BASE_URL}/icons/mobile.svg` },
     ],
     links: { 
       live: "https://eunyul725.github.io/pet_Blog/", 
       repo: "https://github.com/Eunyul725/pet_Blog", 
-      caseStudy: "#" 
+      caseStudy: "https://www.notion.so/26607c6b30e380639d3bda3049cd22d5?source=copy_link" 
     },
   },
   {
@@ -104,14 +104,14 @@ const projects = [
     links: { 
       live: "https://eunyul725.github.io/music/", 
       repo: "https://github.com/Eunyul725/music", 
-      caseStudy: "#" 
+      caseStudy: "https://www.notion.so/26607c6b30e3805dade9c9d4ed1c47b4?source=copy_link" 
     },
   },
   {
     id: "game",
-    title: "악어와 악어새",
+    title: "악어의 입단속",
     tagline: "간단한 반응형 게임",
-    desc: "두더지 게임을 기반으로 응용한 게임으로, 사용자가 타이밍을 맞춰 치아를 눌러야하는 HTML/JS 기반 미니 게임",
+    desc: "두더지 게임을 기반으로 응용한 게임으로, 사용자가 타이밍을 맞춰 썩은 치아를 눌러야하는 HTML/JS 기반 미니 게임",
     cover: `${import.meta.env.BASE_URL}/images/game.png`,
     tech: [ 
       { name: "HTML", icon: `${import.meta.env.BASE_URL}/icons/html.svg` },
@@ -122,13 +122,13 @@ const projects = [
     links: { 
       live: "https://eunyul725.github.io/moleGame/", 
       repo: "https://github.com/Eunyul725/moleGame", 
-      caseStudy: "#" 
+      caseStudy: "https://www.notion.so/26607c6b30e3802fb2fdd3e16eecd518?source=copy_link" 
     },
   },
   {
     id: "canvas",
     title: "그림판",
-    tagline: "브라우저 그람판 모바일형 웹",
+    tagline: "브라우저 그람판 데스크탑형 웹",
     desc: "Canvas API를 활용해 그림 그리기, 색상 변경, 지우개, 사진 업로드 저장 등 여러기능 구현",
     cover: `${import.meta.env.BASE_URL}/images/canvas.png`,
     tech: [ 
@@ -140,7 +140,7 @@ const projects = [
     links: { 
       live: "https://eunyul725.github.io/canvas/", 
       repo: "https://github.com/Eunyul725/canvas", 
-      caseStudy: "#" 
+      caseStudy: "https://www.notion.so/26607c6b30e380898d34e130d6e167ba?source=copy_link" 
     },
   },
   {
@@ -152,13 +152,13 @@ const projects = [
     tech: [ 
       { name: "HTML", icon: `${import.meta.env.BASE_URL}/icons/html.svg` },
       { name: "CSS", icon: `${import.meta.env.BASE_URL}/icons/css.svg` },
-      { name: "jQuery", icon: `${import.meta.env.BASE_URL}/icons/jquery.png` },
+      { name: "jQuery", icon: `${import.meta.env.BASE_URL}/icons/jquery.svg` },
       { name: "Mobile Web", icon: `${import.meta.env.BASE_URL}/icons/mobile.svg` },
     ],
     links: { 
       live: "https://eunyul725.github.io/jejuair/", 
       repo: "https://github.com/Eunyul725/jejuair", 
-      caseStudy: "#" 
+      caseStudy: "https://www.notion.so/26607c6b30e3805a8813cb40c36f7328?source=copy_link" 
     },
   },
 ]
@@ -210,7 +210,10 @@ const projects = [
                     href={p.links.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1 w-32 bg-blue-600 rounded text-xs md:text-sm text-center cursor-pointer"
+                    className="
+                      px-3 py-1 w-32 bg-blue-500 rounded text-xs md:text-sm text-center cursor-pointer
+                      hover:bg-blue-700
+                    "
                   >
                     Website
                   </a>
@@ -220,7 +223,10 @@ const projects = [
                     href={p.links.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1 w-32 bg-red-600 rounded text-xs md:text-sm text-center cursor-pointer"
+                    className="
+                      px-3 py-1 w-32 bg-red-500 rounded text-xs md:text-sm text-center cursor-pointer
+                      hover:bg-red-700
+                    "
                   >
                     Repo
                   </a>
@@ -230,7 +236,10 @@ const projects = [
                     href={p.links.caseStudy}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1 w-32 bg-gray-500 rounded text-xs ms:text-sm text-center cursor-pointer"
+                    className="
+                      px-3 py-1 w-32 bg-gray-500 rounded text-xs md:text-sm text-center cursor-pointer
+                      hover:bg-gray-700
+                    "
                   >
                     MoreInfo
                   </a>
