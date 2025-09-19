@@ -1,4 +1,4 @@
-# 🌌 Eunyul's Portfolio
+## 🌌 Eunyul's Portfolio
 
 **Design × Code × Story**  
 우주 콘셉트의 인터랙션(로켓 버튼, 별·궤도 곡선 배경)으로 나의 작업과 성장 여정을 탐험하듯 살펴볼 수 있는 포트폴리오입니다.  
@@ -8,7 +8,7 @@
 
 ---
 
-## ✨ 주요 특징 (Features)
+### ✨ 주요 특징 (Features)
 
 - **우주 인터랙션 UI**: 로켓 버튼(로켓 발사 후 About 페이지로 전환), 반짝이는 별과 별똥별 애니메이션, 궤도형 곡선 레이아웃  
 - **다양한 화면 대응**: 모바일·태블릿·데스크탑에서 자연스럽게 동작  
@@ -18,55 +18,57 @@
 
 ---
 
-## 🧰 기술 스택 (Tech Stack)
+### 🧰 기술 스택 (Tech Stack)
 
 - **Frontend**: React (Vite) · TypeScript  
 - **Styling**: Tailwind CSS · Framer Motion  
 - **Routing**: React Router  
 - **UI/UX**: Swiper(슬라이더), Custom SVG 아이콘  
 - **배포**: GitHub Pages (main branch)  
-- **Fonts**: Noto Sans KR (본문), DM Serif Text (타이틀), Nanum Myeongjo (포인트)
-
-## 📂 Folder Structure
-```bash
-portfolio/
-├─ public/
-│  ├─ icons/
-│  ├─ images/
-│  ├─ favicon.ico
-│  └─ vite.svg
-├─ src/
-│  ├─ assets/
-│  │  └─ react.svg
-│  ├─ components/
-│  │  ├─ CurveBg.tsx
-│  │  ├─ Navbar.tsx
-│  │  ├─ RocketBtn.tsx
-│  │  ├─ StarBg.tsx
-│  │  └─ TiltCard.tsx
-│  ├─ page/
-│  │  ├─ _about.tsx
-│  │  ├─ _Projects.tsx
-│  │  ├─ _skills.tsx
-│  │  ├─ About.tsx
-│  │  ├─ Contact.tsx
-│  │  ├─ Home.tsx
-│  │  ├─ Projects.tsx
-│  │  ├─ Skills.tsx
-│  │  └─ _App.tsx
-│  ├─ App.tsx
-│  ├─ App.css
-│  ├─ index.css
-│  ├─ main.tsx
-│  └─ vite-env.d.ts
-├─ index.html
-├─ vite.config.ts
-├─ package.json
-└─ README.md
+- **Fonts**: Noto Sans KR (본문), DM Serif Text (타이틀), Nanum Myeongjo (포인트)  
 
 ---
 
-## 📑 Projects (10선)
+### 📂 Folder Structure
+
+    portfolio/
+    ├─ public/
+    │  ├─ icons/
+    │  ├─ images/
+    │  ├─ favicon.ico
+    │  └─ vite.svg
+    ├─ src/
+    │  ├─ assets/
+    │  │  └─ react.svg
+    │  ├─ components/
+    │  │  ├─ CurveBg.tsx
+    │  │  ├─ Navbar.tsx
+    │  │  ├─ RocketBtn.tsx
+    │  │  ├─ StarBg.tsx
+    │  │  └─ TiltCard.tsx
+    │  ├─ page/
+    │  │  ├─ _about.tsx
+    │  │  ├─ _Projects.tsx
+    │  │  ├─ _skills.tsx
+    │  │  ├─ About.tsx
+    │  │  ├─ Contact.tsx
+    │  │  ├─ Home.tsx
+    │  │  ├─ Projects.tsx
+    │  │  ├─ Skills.tsx
+    │  │  └─ _App.tsx
+    │  ├─ App.tsx
+    │  ├─ App.css
+    │  ├─ index.css
+    │  ├─ main.tsx
+    │  └─ vite-env.d.ts
+    ├─ index.html
+    ├─ vite.config.ts
+    ├─ package.json
+    └─ README.md
+
+---
+
+### 📑 Projects (10선)
 
 1. **알롱발롱 (Allonballon)** – 액티브웨어 기업 웹사이트  
 2. **그리다360 (Grida360)** – 기업 포트폴리오 웹사이트  
@@ -81,9 +83,9 @@ portfolio/
 
 ---
 
-## 🚀 Getting Started
-```bash
-git clone https://github.com/eunyul725/portfolio.git
-cd portfolio
-npm install
-npm run dev
+### 🚀 Getting Started
+
+    git clone https://github.com/eunyul725/portfolio.git
+    cd portfolio
+    npm install
+    npm run dev
